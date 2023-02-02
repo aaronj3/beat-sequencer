@@ -33,3 +33,36 @@ Tone.JS
 Javascript
 HTML
 CSS
+
+<img width="1031" alt="Screen Shot 2023-02-02 at 3 26 03 PM" src="https://user-images.githubusercontent.com/63475688/216473852-a666b344-8983-48c8-a8da-d17343cc9c0c.png">
+
+
+Proposed Workflow
+
+Friday Afternoon & Weekend
+    - make classes for sequencers 
+    - implement CSS, HTML elements for sequencers
+    - add EventListeners for toggle on/off
+    - get sound samples 
+    - get the loop to work 
+
+
+Monday
+    - implement master controls 
+        - master volume, 
+        - BPM, 
+        - Metronome 
+    - implement the keyboard
+
+Tuesday
+    - finish unfinished implementations
+
+Wednesday
+    - add styling to the webapp 
+
+Thursday Morning
+    - deploy project to GitHub Pages
+
+
+
+
