@@ -9,12 +9,16 @@ In the Beat Sequencer, users will be able to:
 
 
 Primary Components
+
+
     - bass
     - drums
     - synth
     - playable piano
 
 Global Controls
+
+
     - play/stop
     - metronome
     - volume bar
@@ -23,6 +27,8 @@ Global Controls
 
 
 Technologies, Libraries, APIs
+
+
 Tone.JS
 Javascript
 HTML
