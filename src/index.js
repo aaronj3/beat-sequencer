@@ -1,12 +1,26 @@
 import * as Tone from 'tone';
+import {Sequencer} from "./features/sequencer"
+import {Drums} from "./features/drums"
+
 
 document.addEventListener("DOMContentLoaded", ()=> {
+
+    //intialize global variables
+    const count = 16;
+
+
     const play_button = document.getElementById("play-button");
     const mute_button = document.getElementById("mute-button");
     const master_volume_slider = document.getElementById("volume-control");
 
     const master_volume = new Tone.Volume(master_volume_slider.value).toDestination();
     console.log(master_volume_slider.value);
+
+
+    //initialize racks
+
+    let drums = new Drums(count, 6);
+    drums.createRack(count, 6, "drum_rack");
 
 
     //test button --- get rid of this
@@ -46,6 +60,5 @@ document.addEventListener("DOMContentLoaded", ()=> {
         console.log(master_volume_slider.value);
         console.log(master_volume.volume.value);
     });
-
 
 })
