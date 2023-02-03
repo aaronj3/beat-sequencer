@@ -1,5 +1,10 @@
 
+//import Tone API
+import * as Tone from 'tone';
+
+
 //count represents the number of frequential inputs for a particulr sound board ie. count = 16 means a user has 16 different "counts" to choose from
+
 //num_channels represents the number of different sounds associated with a sound board ie. num_channels = 4 equals (bass low, bass mid, bass high, 808)
 
 
