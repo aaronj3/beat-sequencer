@@ -1,17 +1,23 @@
 import * as Tone from 'tone';
-import {Sequencer} from "./features/sequencer"
-import {Drums} from "./features/drums"
+import { Sequencer } from "./features/sequencer"
+import { Drums } from "./features/drums"
+import { Bass } from "./features/bass"
+import { Chords } from "./features/chords"
+
 
 
 document.addEventListener("DOMContentLoaded", ()=> {
-
     //intialize global variables
     const count = 16;
+    let playing = false;
+    Tone.Transport.bpm.value = 80;
+
 
 
     const play_button = document.getElementById("play-button");
     const mute_button = document.getElementById("mute-button");
     const master_volume_slider = document.getElementById("volume-control");
+    const bpm_slider = document.getElementById("BPM-control");
 
     const master_volume = new Tone.Volume(master_volume_slider.value).toDestination();
     console.log(master_volume_slider.value);
@@ -20,7 +26,13 @@ document.addEventListener("DOMContentLoaded", ()=> {
     //initialize racks
 
     let drums = new Drums(count, 6);
-    drums.createRack(count, 6, "drum_rack");
+    drums.renderRack(count, 6, "drum_rack");
+
+    let bass = new Bass(count, 6);
+    bass.renderRack(count, 6, "bass_rack");
+
+    let chords = new Chords(count, 6);
+    chords.renderRack(count, 6, "chord_rack");
 
 
     //test button --- get rid of this
@@ -30,9 +42,17 @@ document.addEventListener("DOMContentLoaded", ()=> {
     });
 
 
+    //bpm controller
+    bpm_slider.addEventListener("input", () => {
+        Tone.Transport.bpm.value = bpm_slider.value;
+        console.log(Tone.Transport.bpm.value)
+    })
+
+
     //play button toggle
     play_button.addEventListener("click", ()=> {
         //build function to stop or play the loop
+
 
         //handles the UI cosmetic change
         if (play_button.innerHTML === "Play") {

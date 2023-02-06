@@ -1,6 +1,6 @@
 //import Tone API
 import * as Tone from 'tone';
-import Node from "./node";
+import { Node } from "./node";
 import { Sequencer } from './sequencer';
 
 
@@ -9,8 +9,6 @@ export class Drums extends Sequencer {
     constructor(count, num_channels) {
         super(count, num_channels);
         this.sounds = this.initialize_sounds();
-
-        //the idx of row will map to the idx of sounds
         this.populate_rows();
     }
 

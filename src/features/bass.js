@@ -1,16 +1,14 @@
 //import Tone API
 import * as Tone from 'tone';
-import Node from "./node";
+import { Node } from "./node";
+import { Sequencer } from './sequencer';
 
 
-class Bass extends Sequencer {
+export class Bass extends Sequencer {
     constructor(count, num_channels) {
         super(count, num_channels);
-        this.sounds = [];
-        this.initialize_sounds();
+        this.sounds = this.initialize_sounds();
         this.populate_rows();
-
-
     }
 
 
@@ -21,17 +19,13 @@ class Bass extends Sequencer {
     }
 
     populate_rows(){
-        for(let i = 0; i < num_channels; i++) {
-            row = [];
-            for (let j = 0; j < count; j++) {
+        for(let i = 0; i < this.num_channels; i++) {
+            let row = [];
+            for (let j = 0; j < this.count; j++) {
                 row.push(new Node(false));
             }
         this.rows.push(row);
         }
     }
-
-
-
-
 
 }
