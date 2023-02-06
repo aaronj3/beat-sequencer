@@ -28,4 +28,16 @@ export class Bass extends Sequencer {
         }
     }
 
+    toggle(row, col, e) {
+        const node = this.rows[row][col];
+        if (!node.state) {
+            node.state = true;
+            e.target.classList.add("on");
+
+        } else {
+            node.state = false;
+            e.target.classList.remove("on");
+        }
+    }
+
 }

@@ -8,7 +8,8 @@ import { Chords } from "./features/chords"
 
 document.addEventListener("DOMContentLoaded", ()=> {
     //intialize global variables
-    const count = 16;
+    let beat = 0;
+    let count = 16;
     let playing = false;
     Tone.Transport.bpm.value = 80;
 
@@ -19,8 +20,9 @@ document.addEventListener("DOMContentLoaded", ()=> {
     const master_volume_slider = document.getElementById("volume-control");
     const bpm_slider = document.getElementById("BPM-control");
 
-    const master_volume = new Tone.Volume(master_volume_slider.value).toDestination();
-    console.log(master_volume_slider.value);
+    // let master_volume = new Tone.Destination;
+    // master_volume = master_volume_slider;
+    // console.log(master_volume_slider.value);
 
 
     //initialize racks
@@ -76,9 +78,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     ///????This is not working as intended??///
     master_volume_slider.addEventListener("input", ()=> {
-        master_volume.volume.value = master_volume_slider.value;
+        // master_volume.volume = master_volume_slider.value;
+        Tone.Destination.volume.value = master_volume_slider.value;
         console.log(master_volume_slider.value);
-        console.log(master_volume.volume.value);
+        // console.log(master_volume.volume);
+        console.log(Tone.Destination.volume.value)
     });
 
 })

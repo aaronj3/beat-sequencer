@@ -4,3 +4,7 @@
 input[type=range] {
   appearance: slider-vertical;
 }
+
+.on {
+  background-color: green;
+}

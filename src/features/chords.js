@@ -25,4 +25,17 @@ export class Chords extends Sequencer {
         this.rows.push(row);
         }
     }
+
+
+    toggle(row, col, e) {
+        const node = this.rows[row][col];
+        if (!node.state) {
+            node.state = true;
+            e.target.classList.add("on");
+
+        } else {
+            node.state = false;
+            e.target.classList.remove("on");
+        }
+    }
 }
