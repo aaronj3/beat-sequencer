@@ -15,12 +15,12 @@ export class Drums extends Sequencer {
 
     initialize_sounds(){
         let sounds = [];
-        const hihat = new Tone.Player('../audio/splice-drums/MURDA_hihat.wav').toDestination();
-        const kick = new Tone.Player('../audio/splice-drums/OS_VBE_kick_deep.wav').toDestination();
-        const snare = new Tone.Player('../audio/splice-drums/SANGO_snare_standard_09.wav').toDestination();
-        const clap = new Tone.Player('../audio/splice-drums/clap_click.wav').toDestination();
-        const clap2 = new Tone.Player('../audio/splice-drums/clap2.wav').toDestination();
-        const rimshot = new Tone.Player('../audio/splice-drums/rimshot.wav').toDestination();
+        const hihat = new Tone.Player('audio/splice-drums/MURDA_hihat.wav').toDestination();
+        const kick = new Tone.Player('audio/splice-drums/OS_VBE_kick_deep.wav').toDestination();
+        const snare = new Tone.Player('audio/splice-drums/SANGO_snare_standard_09.wav').toDestination();
+        const clap = new Tone.Player('audio/splice-drums/clap_click.wav').toDestination();
+        const clap2 = new Tone.Player('audio/splice-drums/clap2.wav').toDestination();
+        const rimshot = new Tone.Player('audio/splice-drums/rimshot.wav').toDestination();
 
 
         sounds.push(hihat);
