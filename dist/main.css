@@ -27,24 +27,12 @@ input[type=range] {
   background-color: coral;
 }
 
-.node {
-  padding: 12px 24px;
-  margin: 2px;
-}
-
-#master-rack{
-  text-align: center;
-}
-
 body {
-  font-family: 'Helvetica', Courier, monospace;
-}
-
-#play-button {
-  padding: 12px 24px;
-  font-size: 24px;
-}
-
-#master-controls {
+  font-style: Helvetica;
   text-align: center;
+}
+
+.node {
+  padding: 12px 20px;
+  margin: 2px;
 }
