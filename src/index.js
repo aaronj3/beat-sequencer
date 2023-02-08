@@ -11,13 +11,15 @@ document.addEventListener("DOMContentLoaded", ()=> {
     let beat = 0;
     let count = 16;
     let playing = false;
-    Tone.Transport.bpm.value = 80;
 
 
     const play_button = document.getElementById("play-button");
-    const mute_button = document.getElementById("mute-button");
     const master_volume_slider = document.getElementById("volume-control");
     const bpm_slider = document.getElementById("BPM-control");
+
+    //set initial BPM
+    Tone.Transport.bpm.value = bpm_slider.value;
+
 
     //initialize racks
 
@@ -51,17 +53,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     //play button toggle
     play_button.addEventListener("click", ()=> {
-        console.log("button working")
-        //build function to stop or play the loop
-        //handles the UI cosmetic change
         if (play_button.innerHTML === "Play") {
-            // beat = 0;
+            beat = 0;
+            Tone.Transport.cancel()
             Tone.Transport.start();
-            Tone.start();
             playing = true;
             playLoop();
             play_button.innerHTML = "Stop";
-        } else {
+            } else {
             Tone.Transport.stop();
             play_button.innerHTML = "Play";
             beat = 0;
@@ -69,26 +68,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
         }
     });
 
-    //mute button toggle
-    mute_button.addEventListener("click", ()=> {
-        //build function to mute
-        //handles the UI cosmetic change
-        if (mute_button.innerHTML === "Mute") {
-            mute_button.innerHTML = "Unmute";
-        } else {
-            mute_button.innerHTML = "Mute";
-        }
-    });
 
 
     //master volume control
     master_volume_slider.addEventListener("input", ()=> {
-        // master_volume.volume = master_volume_slider.value;
         Tone.Destination.volume.value = master_volume_slider.value;
-        console.log(master_volume_slider.value);
-        // console.log(master_volume.volume);
-        console.log(Tone.Destination.volume.value)
     });
-
 
 })
