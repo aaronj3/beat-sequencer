@@ -5,7 +5,6 @@ It is intended for users of all backgrounds, as prior knowledge of music theory 
 In the Beat Sequencer, users will be able to:
     - manipulate the on/off status of a tracks
     - change a track's loop through manipulation of the 4-bar visual bar
-    - play a piano through their own computer's keys
 
 
 Primary Components
@@ -13,14 +12,12 @@ Primary Components
 
     - bass
     - drums
-    - synth
-    - playable piano
 
 Global Controls
 
 
     - play/stop
-    - metronome
+    - clear
     - volume bar
     - BPM bar
 
@@ -40,29 +37,25 @@ CSS
 Proposed Workflow
 
 Friday Afternoon & Weekend
-    - make classes for sequencers 
+    - make classes for sequencers
     - implement CSS, HTML elements for sequencers
     - add EventListeners for toggle on/off
-    - get sound samples 
-    - get the loop to work 
+    - get sound samples
+    - get the loop to work
 
 
 Monday
-    - implement master controls 
-        - master volume, 
-        - BPM, 
-        - Metronome 
+    - implement master controls
+        - master volume,
+        - BPM,
+        - Metronome
     - implement the keyboard
 
 Tuesday
     - finish unfinished implementations
 
 Wednesday
-    - add styling to the webapp 
+    - add styling to the webapp
 
 Thursday Morning
     - deploy project to GitHub Pages
-
-
-
-
