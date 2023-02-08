@@ -29,6 +29,7 @@ export class Sequencer {
             row.dataset.pos = i;
             for(let j = 0; j < this.count; j++) {
                 const button = document.createElement("button");
+                button.classList.add("node");
                 button.dataset.pos = j;
                 button.addEventListener('click', (e) => {
                     this.toggle(i, j, e);

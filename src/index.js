@@ -55,7 +55,8 @@ document.addEventListener("DOMContentLoaded", ()=> {
     play_button.addEventListener("click", ()=> {
         if (play_button.innerHTML === "Play") {
             beat = 0;
-            Tone.Transport.cancel()
+            Tone.context.resume();
+            Tone.Transport.cancel();
             Tone.Transport.start();
             playing = true;
             playLoop();
