@@ -55,11 +55,11 @@ document.addEventListener("DOMContentLoaded", ()=> {
         //build function to stop or play the loop
         //handles the UI cosmetic change
         if (play_button.innerHTML === "Play") {
-            Tone.start();
+            // beat = 0;
             Tone.Transport.start();
+            Tone.start();
             playing = true;
             playLoop();
-            beat = 0;
             play_button.innerHTML = "Stop";
         } else {
             Tone.Transport.stop();

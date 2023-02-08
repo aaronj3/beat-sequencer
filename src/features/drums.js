@@ -23,9 +23,6 @@ export class Drums extends Sequencer {
         const rimshot = new Tone.Player('../audio/splice-drums/rimshot.wav').toDestination();
 
 
-
-
-
         sounds.push(hihat);
         sounds.push(kick);
         sounds.push(snare);
