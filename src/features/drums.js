@@ -15,19 +15,23 @@ export class Drums extends Sequencer {
 
     initialize_sounds(){
         let sounds = [];
-        const hihat = new Tone.Player('../audio/drum-samples/acoustic-kit/hihat.mp3')
-        const kick = new Tone.Player('../audio/drum-samples/acoustic-kit/kick.mp3')
-        const snare = new Tone.Player('../audio/drum-samples/acoustic-kit/snare.mp3')
-        const tom1 = new Tone.Player('../audio/drum-samples/acoustic-kit/tom1.mp3')
-        const tom2 = new Tone.Player('../audio/drum-samples/acoustic-kit/tom2.mp3')
-        const tom3 = new Tone.Player('../audio/drum-samples/acoustic-kit/tom3.mp3')
+        const hihat = new Tone.Player('../audio/splice-drums/MURDA_hihat.wav').toDestination();
+        const kick = new Tone.Player('../audio/splice-drums/OS_VBE_kick_deep.wav').toDestination();
+        const snare = new Tone.Player('../audio/splice-drums/SANGO_snare_standard_09.wav').toDestination();
+        const clap = new Tone.Player('../audio/splice-drums/clap_click.wav').toDestination();
+        const clap2 = new Tone.Player('../audio/splice-drums/clap2.wav').toDestination();
+        const rimshot = new Tone.Player('../audio/splice-drums/rimshot.wav').toDestination();
+
+
+
+
 
         sounds.push(hihat);
         sounds.push(kick);
         sounds.push(snare);
-        sounds.push(tom1);
-        sounds.push(tom2);
-        sounds.push(tom3);
+        sounds.push(clap);
+        sounds.push(clap2);
+        sounds.push(rimshot);
         return sounds;
     }
 
@@ -51,6 +55,15 @@ export class Drums extends Sequencer {
         } else {
             node.state = false;
             e.target.classList.remove("on");
+        }
+    }
+
+    playNotes(beat, time) {
+        for(let i = 0; i < this.rows.length; i++) {
+            if(this.rows[i][beat].state === true) {
+                let sample = this.sounds[i];
+                sample.start(time);
+            }
         }
     }
 }

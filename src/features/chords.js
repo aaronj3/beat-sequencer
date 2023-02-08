@@ -14,6 +14,7 @@ export class Chords extends Sequencer {
     initialize_sounds(){
         let sounds = [];
 
+
     }
 
     populate_rows(){
@@ -36,6 +37,15 @@ export class Chords extends Sequencer {
         } else {
             node.state = false;
             e.target.classList.remove("on");
+        }
+    }
+
+    playNotes(beat, time) {
+        for(let i = 0; i < this.rows.length; i++) {
+            if(this.rows[i][beat].state === true) {
+                let sample = this.sounds[i];
+                sample.start(time);
+            }
         }
     }
 }

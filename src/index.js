@@ -14,16 +14,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     Tone.Transport.bpm.value = 80;
 
 
-
     const play_button = document.getElementById("play-button");
     const mute_button = document.getElementById("mute-button");
     const master_volume_slider = document.getElementById("volume-control");
     const bpm_slider = document.getElementById("BPM-control");
-
-    // let master_volume = new Tone.Destination;
-    // master_volume = master_volume_slider;
-    // console.log(master_volume_slider.value);
-
 
     //initialize racks
 
@@ -37,11 +31,15 @@ document.addEventListener("DOMContentLoaded", ()=> {
     chords.renderRack(count, 6, "chord_rack");
 
 
-    //test button --- get rid of this
-    document.getElementById("test").addEventListener("click", ()=> {
-        const synth = new Tone.Synth().toDestination();
-        synth.triggerAttackRelease("A4", "8n");
-    });
+    const playLoop = () => {
+        const loop = (time) => {
+            drums.playNotes(beat, time);
+            bass.playNotes(beat, time);
+            beat = (beat + 1) % count;
+        }
+        Tone.Transport.scheduleRepeat(loop, '8n');
+    }
+
 
 
     //bpm controller
@@ -53,14 +51,21 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     //play button toggle
     play_button.addEventListener("click", ()=> {
+        console.log("button working")
         //build function to stop or play the loop
-
-
         //handles the UI cosmetic change
         if (play_button.innerHTML === "Play") {
+            Tone.start();
+            Tone.Transport.start();
+            playing = true;
+            playLoop();
+            beat = 0;
             play_button.innerHTML = "Stop";
         } else {
+            Tone.Transport.stop();
             play_button.innerHTML = "Play";
+            beat = 0;
+            playing = false;
         }
     });
 
@@ -76,7 +81,7 @@ document.addEventListener("DOMContentLoaded", ()=> {
     });
 
 
-    ///????This is not working as intended??///
+    //master volume control
     master_volume_slider.addEventListener("input", ()=> {
         // master_volume.volume = master_volume_slider.value;
         Tone.Destination.volume.value = master_volume_slider.value;
@@ -84,5 +89,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
         // console.log(master_volume.volume);
         console.log(Tone.Destination.volume.value)
     });
+
 
 })

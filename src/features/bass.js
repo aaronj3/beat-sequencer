@@ -13,9 +13,22 @@ export class Bass extends Sequencer {
 
 
     initialize_sounds(){
-        // const sampleA = new Tone.Player("../audio/")
+        let sounds = [];
+        const bass_1 = new Tone.Player('../audio/bass-samples/CHEF_808_clean_A.wav').toDestination();
+        const bass_2 = new Tone.Player('../audio/bass-samples/ESTA_bass_one_shot_doom_C.wav').toDestination();
+        const bass_3 = new Tone.Player('../audio/bass-samples/LAPALUX_bass_one_shot_dirty_growling_prophet_C.wav').toDestination();
+        const bass_4 = new Tone.Player('../audio/bass-samples/OS_RCK_808_badd_C.wav').toDestination();
+        const bass_5 = new Tone.Player('../audio/bass-samples/OS_TE_Sub_C_Bags.wav').toDestination();
+        const bass_6 = new Tone.Player('../audio/bass-samples/tp_808_one_shot_southern_Bbmaj.wav').toDestination();
 
+        sounds.push(bass_1);
+        sounds.push(bass_2);
+        sounds.push(bass_3);
+        sounds.push(bass_4);
+        sounds.push(bass_5);
+        sounds.push(bass_6);
 
+        return sounds;
     }
 
     populate_rows(){
@@ -37,6 +50,15 @@ export class Bass extends Sequencer {
         } else {
             node.state = false;
             e.target.classList.remove("on");
+        }
+    }
+
+    playNotes(beat, time) {
+        for(let i = 0; i < this.rows.length; i++) {
+            if(this.rows[i][beat].state === true) {
+                let sample = this.sounds[i];
+                sample.start(time);
+            }
         }
     }
 
