@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
     //initialize racks
 
     let drums = new Drums(count, rows);
-    drums.renderRack(count, rows, "drum_rack");
+    drums.renderRack("drum_rack");
 
     let bass = new Bass(count, rows);
-    bass.renderRack(count, rows, "bass_rack");
+    bass.renderRack("bass_rack");
 
 
     const playLoop = () => {

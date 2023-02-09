@@ -1,8 +1,5 @@
-//import Tone API
 import * as Tone from 'tone';
 import { Node } from "./node";
-
-
 
 //count represents the number of frequential inputs for a particulr sound board ie. count = 16 means a user has 16 different "counts" to choose from
 
@@ -16,8 +13,7 @@ export class Sequencer {
         this.rows = [];
     }
 
-
-    renderRack(count, num_channels, rack_name){
+    renderRack(rack_name){
         const master_rack = document.getElementById("master-rack");
         const rack = document.createElement("div");
         rack.id = `${rack_name}`;
@@ -41,6 +37,4 @@ export class Sequencer {
         }
         master_rack.append(rack);
     }
-
-
 }
