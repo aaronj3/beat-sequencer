@@ -30,7 +30,13 @@ CSS
 
 <img width="366" alt="Screen Shot 2023-02-09 at 11 10 13 AM" src="https://user-images.githubusercontent.com/63475688/217913834-9a52f24b-0d53-40cd-b259-acc3e899a84d.png">
 
+These two function primarily handle the loop playback mechanism. Tone enables for a global time context to be set so that you can
+schedule playback.
+
 <img width="538" alt="Screen Shot 2023-02-09 at 11 09 29 AM" src="https://user-images.githubusercontent.com/63475688/217913878-26f39b9d-780b-40d4-ba7f-1dd2111cf042.png">
+
+This is the main Sequencer class that serves as the top-level model for my sound rack. A straight-forward approach, this implementation
+utilizes the states of nodes (as represented by on/off toggles of a button) to play a .wav file that is mapped to the index of an array of these nodes.
 
 
 ## Interface
