@@ -2,6 +2,24 @@ input[type="range"] {
     appearance: slider-vertical;
 }
 
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: linear-gradient(to bottom, gray 0%, white 100%);
+    border-radius: 4px;
+    box-shadow: inset 0px 0px 5px #ddd;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px #ddd;
+    margin-top: -4px;
+}
+
+
 .on {
     background-color: green;
 }
