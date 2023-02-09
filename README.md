@@ -56,9 +56,6 @@ CSS
 ```
 
 
-
-<img width="366" alt="Screen Shot 2023-02-09 at 11 10 13 AM" src="https://user-images.githubusercontent.com/63475688/217913834-9a52f24b-0d53-40cd-b259-acc3e899a84d.png">
-
 These two function primarily handle the loop playback mechanism. Tone enables for a global time context to be set so that you can
 schedule playback.
 
