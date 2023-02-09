@@ -93,21 +93,21 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
 
     //instructions button logic
-    const instructionsBtn = document.getElementById("instructions-btn");
-    const instructionsModal = document.getElementById("instructions-modal");
+    const instructions_button = document.getElementById("instructions-btn");
+    const instructions_modal = document.getElementById("instructions-modal");
     const closeButton = document.getElementsByClassName("close-button")[0];
 
-    instructionsBtn.addEventListener("click", () => {
-    instructionsModal.style.display = "block";
+    instructions_button.addEventListener("click", () => {
+    instructions_modal.style.display = "block";
     })
 
     closeButton.addEventListener("click", () => {
-    instructionsModal.style.display = "none";
+    instructions_modal.style.display = "none";
     });
 
     window.addEventListener("click", (e) => {
-    if (e.target == instructionsModal) {
-        instructionsModal.style.display = "none";}
+    if (e.target == instructions_modal) {
+        instructions_modal.style.display = "none";}
     });
 
 
