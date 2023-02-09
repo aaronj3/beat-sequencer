@@ -94,4 +94,25 @@ document.addEventListener("DOMContentLoaded", ()=> {
         Tone.Destination.volume.value = master_volume_slider.value;
     });
 
-})
+
+
+    //instructions button logic
+    const instructionsBtn = document.getElementById("instructions-btn");
+    const instructionsModal = document.getElementById("instructions-modal");
+    const closeButton = document.getElementsByClassName("close-button")[0];
+
+    instructionsBtn.addEventListener("click", () => {
+    instructionsModal.style.display = "block";
+    })
+
+    closeButton.addEventListener("click", () => {
+    instructionsModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+    if (e.target == instructionsModal) {
+        instructionsModal.style.display = "none";}
+    });
+
+
+});

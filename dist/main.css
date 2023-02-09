@@ -1,3 +1,72 @@
-input[type=range]{appearance:slider-vertical}.on{background-color:green}#drum_rack{margin-bottom:20px;padding:25px 25px 25px 25px;background-color:#faebd7}#bass_rack{margin-bottom:20px;padding:25px 25px 25px 25px;background-color:plum}#chord_rack{margin-bottom:20px;padding:25px 25px 25px 25px;background-color:coral}body{font-style:Helvetica;text-align:center}.node{padding:12px 20px;margin:2px}
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+input[type=range] {
+  appearance: slider-vertical;
+}
 
-/*# sourceMappingURL=main.css.map*/
+.on {
+  background-color: green;
+}
+
+#drum_rack {
+  margin-bottom: 20px;
+  padding: 25px 25px 25px 25px;
+  background-color: antiquewhite;
+}
+
+#bass_rack {
+  margin-bottom: 20px;
+  padding: 25px 25px 25px 25px;
+  background-color: plum;
+}
+
+#chord_rack {
+  margin-bottom: 20px;
+  padding: 25px 25px 25px 25px;
+  background-color: coral;
+}
+
+body {
+  font-style: Helvetica;
+  text-align: center;
+}
+
+.node {
+  padding: 12px 20px;
+  margin: 2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close-button {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
