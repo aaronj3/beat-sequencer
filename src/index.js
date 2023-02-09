@@ -2,7 +2,6 @@ import * as Tone from 'tone';
 import { Sequencer } from "./features/sequencer"
 import { Drums } from "./features/drums"
 import { Bass } from "./features/bass"
-import { Chords } from "./features/chords"
 
 
 
@@ -30,9 +29,6 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     let bass = new Bass(count, rows);
     bass.renderRack(count, rows, "bass_rack");
-
-    let chords = new Chords(count, rows);
-    chords.renderRack(count, rows, "chord_rack");
 
 
     const playLoop = () => {
