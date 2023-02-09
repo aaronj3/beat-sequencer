@@ -14,12 +14,12 @@ export class Bass extends Sequencer {
 
     initialize_sounds(){
         let sounds = [];
-        const bass_1 = new Tone.Player('../src/audio/bass-samples/CHEF_808_clean_A.wav').toDestination();
-        const bass_2 = new Tone.Player('../src/audio/bass-samples/ESTA_bass_one_shot_doom_C.wav').toDestination();
-        const bass_3 = new Tone.Player('../src/audio/bass-samples/LAPALUX_bass_one_shot_dirty_growling_prophet_C.wav').toDestination();
-        const bass_4 = new Tone.Player('../src/audio/bass-samples/OS_RCK_808_badd_C.wav').toDestination();
-        const bass_5 = new Tone.Player('../src/audio/bass-samples/OS_TE_Sub_C_Bags.wav').toDestination();
-        const bass_6 = new Tone.Player('../src/audio/bass-samples/tp_808_one_shot_southern_Bbmaj.wav').toDestination();
+        const bass_1 = new Tone.Player('audio/bass-samples/CHEF_808_clean_A.wav').toDestination();
+        const bass_2 = new Tone.Player('audio/bass-samples/ESTA_bass_one_shot_doom_C.wav').toDestination();
+        const bass_3 = new Tone.Player('audio/bass-samples/LAPALUX_bass_one_shot_dirty_growling_prophet_C.wav').toDestination();
+        const bass_4 = new Tone.Player('audio/bass-samples/OS_RCK_808_badd_C.wav').toDestination();
+        const bass_5 = new Tone.Player('audio/bass-samples/OS_TE_Sub_C_Bags.wav').toDestination();
+        const bass_6 = new Tone.Player('audio/bass-samples/tp_808_one_shot_southern_Bbmaj.wav').toDestination();
 
         sounds.push(bass_1);
         sounds.push(bass_2);
