@@ -24,6 +24,15 @@ Javascript
 HTML
 CSS
 
+## Technical Implementation
+<img width="384" alt="Screen Shot 2023-02-09 at 11 10 07 AM" src="https://user-images.githubusercontent.com/63475688/217913846-4b1a7692-d537-4d9f-8d47-57b6547176d1.png">
+
+
+<img width="366" alt="Screen Shot 2023-02-09 at 11 10 13 AM" src="https://user-images.githubusercontent.com/63475688/217913834-9a52f24b-0d53-40cd-b259-acc3e899a84d.png">
+
+<img width="538" alt="Screen Shot 2023-02-09 at 11 09 29 AM" src="https://user-images.githubusercontent.com/63475688/217913878-26f39b9d-780b-40d4-ba7f-1dd2111cf042.png">
+
+
 ## Interface
 
 <img width="1644" alt="Screen Shot 2023-02-09 at 10 55 04 AM" src="https://user-images.githubusercontent.com/63475688/217911207-38f49321-8fff-447b-beaa-8a267d61110f.png">

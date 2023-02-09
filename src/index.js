@@ -74,15 +74,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
             for(let j = 0; j < count; j++) {
                 drums.rows[i][j].state = false;
                 bass.rows[i][j].state = false;
-
             }
         }
         for(let k = 0; k < all_nodes.length; k++) {
             all_nodes[k].classList.remove("on");
         }
     });
-
-
 
 
     //master volume control
@@ -109,6 +106,4 @@ document.addEventListener("DOMContentLoaded", ()=> {
     if (e.target == instructions_modal) {
         instructions_modal.style.display = "none";}
     });
-
-
 });
